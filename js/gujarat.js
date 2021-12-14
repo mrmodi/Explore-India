@@ -14,35 +14,35 @@ function registration()
 
 		if(name=='')
 		{
-			alert('Please enter your name');
+			text = "Please Enter your name" ;
 		}
 		else if(!letters.test(name))
 		{
-			alert('Name field required only alphabet characters');
+			text = "Name field required only alphabet characters" ;
 		}
 		else if(email=='')
 		{
-			alert('Please enter your user email id');
+			text =  "Please enter your user email id";
 		}
 		else if (!filter.test(email))
 		{
-			alert('Invalid email');
+			text = "Invalid email";
 		}
 		else if(uname=='')
 		{
-			alert('Please enter the user name.');
+			text = "Please enter the user name. ";
 		}
 		else if(!letters.test(uname))
 		{
-			alert('User name field required only alphabet characters');
+			text = "User name field required only alphabet characters " ;
 		}
 		else if(pwd=='')
 		{
-			alert('Please enter Password');
+			text = "Please enter Password";
 		}
 		else if(cpwd=='')
 		{
-			alert('Enter Confirm Password');
+			text = "Enter Confirm Password";
 		}
 		else if(!pwd_expression.test(pwd))
 		{
@@ -50,22 +50,23 @@ function registration()
 		}
 		else if(pwd != cpwd)
 		{
-			alert ('Password not Matched');
+			text = "Password not Matched";
 		}
 		else if(document.getElementById("t5").value.length < 6)
 		{
-			alert ('Password minimum length is 6');
+			text = "Password minimum length is 6";
 		}
 		else if(document.getElementById("t5").value.length > 12)
 		{
-			alert ('Password max length is 12');
+			text = "Password max length is 12";
 		}
 		else
 		{				                            
-               alert('Thank You for Login.');
+               text = "Thank You for Login.";
 			   // Redirecting to other page or webste code. 
-			   window.location = "http://127.0.0.1:5501/gujarat.html"; 
+			   window.location = "http://127.0.0.1:5502/gujarat.html"; 
 		}
+		document.getElementById("demo").innerHTML = text;
 	}
 	function clearFunc()
 	{
